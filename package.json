@@ -15,7 +15,7 @@
   "type": "module",
   "main": "app.js",
   "scripts": {
-    "dev": "node ./srv/app.js"
+    "dev": "nodemon ./srv/app.js"
   },
   "dependencies": {
     "bcrypt": "^6.0.0",
@@ -28,5 +28,8 @@
     "helmet": "^8.1.0",
     "jsonwebtoken": "^9.0.2",
     "morgan": "^1.10.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
   }
 }

@@ -8,4 +8,20 @@ export class UserController {
 
         return res.status(201).json(user);
     }
+
+    static async login(req, res) {
+        const { identifier, password } = req.body;
+
+        const r = await User.authenticate(identifier, password);
+
+        return res.send(r);
+    }
+
+    static async authenticate(req, res) {
+        const { id, key } = req.body;
+
+        const r = await User.checkSession(id, key);
+
+        return res.send(r)
+    }
 }
